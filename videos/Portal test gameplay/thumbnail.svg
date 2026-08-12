@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09263a"/><stop offset=".55" stop-color="#4ed7ff"/><stop offset="1" stop-color="#dffaff"/></linearGradient></defs>
+<rect width="1280" height="720" fill="url(#g)"/>
+<text x="640" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="76" font-weight="800" fill="#fff">PORTAL TEST GAMEPLAY</text>
+<text x="640" y="410" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="#e9fbff">❄ IceYT</text>
+</svg>

@@ -1,50 +1,41 @@
-# IceYT — versión sin Node.js ❄
+# IceYT — prueba OneDrive ❄
 
-Esta versión no necesita Node.js, npm ni comandos en tu PC.
+Esta versión no necesita Node.js ni npm.
 
-## Cómo funciona
+## Vídeo de prueba
 
-IceYT lee automáticamente la carpeta `videos/` de un repositorio público de GitHub usando la API de GitHub. Netlify solamente aloja la página.
+La carpeta:
 
-Cada vídeo debe tener:
+`videos/Portal test gameplay/`
+
+contiene `info.txt` con el enlace de inserción de OneDrive. El MP4 de 742 MB permanece en OneDrive y NO se sube a GitHub.
+
+## Estructura para futuros vídeos
 
 ```text
 videos/
 └── Nombre del video/
-    ├── video.mp4
     ├── thumbnail.jpg
     └── info.txt
 ```
 
-El nombre de la carpeta se convierte en el título.
-
-`info.txt`:
+Ejemplo de `info.txt`:
 
 ```text
-description=Descripción del video
-duration=03:42
+description=Descripción del vídeo
+duration=01:15:00
 author=Vapy
 date=2026-08-12
 category=Gaming
+onedrive=https://1drv.ms/...
 ```
 
-## Configuración única
+También se acepta pegar el `<iframe ...>` completo después de `onedrive=`.
 
-1. Crea un repositorio público en GitHub.
-2. Sube todo el contenido de esta carpeta al repositorio.
-3. Dentro de `app.js`, cambia:
+## Publicación
 
-```js
-githubOwner: "TU_USUARIO",
-githubRepo: "TU_REPOSITORIO",
-githubBranch: "main"
-```
+El repositorio ya está configurado para `Vapyrestrepo/IceYT`. En Netlify no debe haber Build command; es una página estática.
 
-4. Conecta ese repositorio a Netlify.
-5. Cada vez que agregues una carpeta dentro de `videos/` y hagas push a GitHub, IceYT la detectará automáticamente.
+## Privacidad
 
-No necesitas Node.js.
-
-## Importante
-
-GitHub tiene límites de tamaño para archivos. Para vídeos grandes, GitHub no es el almacenamiento adecuado. Podemos cambiar posteriormente el sistema para usar un CDN/storage de vídeo mientras GitHub solamente guarda el catálogo y las miniaturas.
+IceYT no muestra el correo de la cuenta en su propia interfaz. El reproductor es el embed de OneDrive, por lo que cualquier identidad que Microsoft decida mostrar dentro de su propio reproductor/interfaz depende de OneDrive.
