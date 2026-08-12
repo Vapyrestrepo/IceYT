@@ -1,8 +1,8 @@
 const CONFIG = {
   // Cambia estos 3 valores cuando subas el proyecto a GitHub.
   // Ejemplo: https://github.com/usuario/IceYT
-  githubOwner: "TU_USUARIO",
-  githubRepo: "TU_REPOSITORIO",
+  githubOwner: "Vapyrestrepo",
+  githubRepo: "IceYT",
   githubBranch: "main",
   videosPath: "videos"
 };
