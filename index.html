@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="IceYT — una videoteca con estética de hielo.">
+  <title>IceYT ❄</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="snow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="IceYT inicio"><span>❄</span> IceYT</a>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Buscar videos..." autocomplete="off">
+      <button id="searchBtn" aria-label="Buscar">⌕</button>
+    </div>
+    <button id="themeBtn" class="icon-btn" title="Cambiar brillo">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">FROZEN VIDEO HUB</p>
+        <h1>Tu rincón de videos<br><span>congelado.</span></h1>
+        <p class="hero-text">Agrega carpetas dentro de <code>videos/</code> y el catálogo se actualiza automáticamente en cada deploy.</p>
+      </div>
+      <div class="ice-orb" aria-hidden="true">❄</div>
+    </section>
+
+    <section class="toolbar">
+      <h2 id="resultsTitle">Videos</h2>
+      <select id="sortSelect" aria-label="Ordenar videos">
+        <option value="newest">Más recientes</option>
+        <option value="title">Título A-Z</option>
+        <option value="oldest">Más antiguos</option>
+      </select>
+    </section>
+
+    <section id="videoGrid" class="video-grid" aria-live="polite"></section>
+    <p id="emptyState" class="empty" hidden>No encontré videos con esa búsqueda. ❄</p>
+  </main>
+
+  <div id="playerModal" class="modal" hidden>
+    <div class="player-shell">
+      <button id="closePlayer" class="close-btn" aria-label="Cerrar reproductor">×</button>
+      <video id="player" controls playsinline preload="metadata"></video>
+      <div class="player-info">
+        <div>
+          <p id="playerMeta" class="eyebrow"></p>
+          <h2 id="playerTitle"></h2>
+          <p id="playerDescription"></p>
+        </div>
+        <button id="fullscreenBtn" class="ice-button">⛶ Pantalla completa</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
