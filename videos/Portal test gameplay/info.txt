@@ -1,5 +1,5 @@
 description=Portal test gameplay
-duration=01:15:00
+duration=00:06:46
 author=Vapy
 date=2026-08-12
 category=Gaming
